@@ -15,8 +15,8 @@
 // const km = prompt("Inserisci il numero dei chilometri del tuo viaggio");
 // const age = prompt("Inserisci la tua età");
 
-const km = 20; // aggiungere prompt
-const age = 10; // aggiungere prompt
+const km = 30; // aggiungere prompt
+const age = 70; // aggiungere prompt
 const priceKm = 0.21;
 
 let priceTicket = (priceKm * km).toFixed(2);
@@ -27,12 +27,12 @@ console.log("prezzo bigliotto standard",priceTicket)
 
 // Prezzo biglietto standard
 // da correggere
-// if (age > 18) && (age < 65){
-//   priceTicket = priceKm * km;
-// }else{
-//   priceTicket = "/";
-// }
-
+/*if (age > 18) && (age < 65){
+  priceTicket = priceKm * km;
+}else{
+  priceTicket = "/";
+}
+*/
 console.log("prezzo biglietto standard",priceTicket)
 
 let priceStandard = 
@@ -54,7 +54,7 @@ console.log("prezzo biglietto minorenni",priceTicket)
 
 let priceUnderage = 
 `
-Il prezzo del tuo biglietto è di: ${priceTicket.toFixed(2)} euro.
+Il prezzo del tuo biglietto è di: ${priceTicket} euro.
 `;
 
 document.getElementById("underage").innerHTML = priceUnderage;
@@ -71,7 +71,7 @@ console.log("prezzo biglietto anziani",priceTicket)
 
 let priceElderly = 
 `
-Il prezzo del tuo biglietto è di: ${priceTicket.toFixed(2)} euro.
+Il prezzo del tuo biglietto è di: ${priceTicket} euro.
 `;
 
 document.getElementById("elderly").innerHTML = priceElderly;
