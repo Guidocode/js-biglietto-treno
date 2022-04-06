@@ -16,7 +16,7 @@
 // const age = prompt("Inserisci la tua età");
 
 const km = 30; // aggiungere prompt
-const age = 70; // aggiungere prompt
+const age = 80; // aggiungere prompt
 const priceKm = 0.21;
 
 let priceTicket = (priceKm * km).toFixed(2);
@@ -26,13 +26,12 @@ console.log("prezzo bigliotto standard",priceTicket)
 
 
 // Prezzo biglietto standard
-// da correggere
-/*if (age > 18) && (age < 65){
+if (age > 18 && age < 65){
   priceTicket = priceKm * km;
 }else{
   priceTicket = "/";
 }
-*/
+
 console.log("prezzo biglietto standard",priceTicket)
 
 let priceStandard = 
