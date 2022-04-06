@@ -12,22 +12,19 @@
  Indicare Pb con due decimali
 */
 
-// const km = prompt("Inserisci il numero dei chilometri del tuo viaggio");
-// const age = prompt("Inserisci la tua età");
+const km = prompt("Inserisci il numero dei chilometri del tuo viaggio");
+const age = prompt("Inserisci la tua età");
 
-const km = 30; // aggiungere prompt
-const age = 80; // aggiungere prompt
+//const km = 30; // aggiungere prompt
+//const age = 20; // aggiungere prompt
 const priceKm = 0.21;
 
 let priceTicket = (priceKm * km).toFixed(2);
 
 
-console.log("prezzo bigliotto standard",priceTicket)
-
-
 // Prezzo biglietto standard
 if (age > 18 && age < 65){
-  priceTicket = priceKm * km;
+  priceTicket = priceKm * km; 
 }else{
   priceTicket = "/";
 }
@@ -74,4 +71,5 @@ Il prezzo del tuo biglietto è di: ${priceTicket} euro.
 `;
 
 document.getElementById("elderly").innerHTML = priceElderly;
+
 
