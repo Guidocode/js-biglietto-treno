@@ -43,14 +43,14 @@ if(insertOk === true){
   }
 
 
-  console.log("prezzo biglietto",priceTicket)
+  console.log("prezzo biglietto",priceTicket);
 
-  const output = 
+  output = 
   `
   Il prezzo del tuo biglietto è di: ${priceTicket.toFixed(2)} euro.
   `;
 }else{
-  output = ("Inserire i dati corretti!")
+  output = "Inserire i dati corretti!";
 }
 
 
