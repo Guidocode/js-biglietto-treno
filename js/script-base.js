@@ -11,57 +11,48 @@
   
  Indicare Pb con due decimali
 */
+let insertOk = true;
 
-const km = prompt("Inserisci il numero dei chilometri del tuo viaggio");
-const age = prompt("Inserisci la tua età");
-
-// const km = 30; // aggiungere prompt
-// const age = 80; // aggiungere prompt
-const priceKm = 0.21;
-
-let priceTicket = (priceKm * km).toFixed(2);
-
-
-
-
-if (age > 18 && age < 65){
-  priceTicket = priceKm * km; // Prezzo biglietto standard
-}else if (age < 18){
-  priceTicket = (priceKm * km) * 0.8; // Prezzo biglietto minorenni
-}else if (age > 65){
-  priceTicket = (priceKm * km) * 0.6; // Prezzo biglietto anziani
-}else{
-  priceTicket = "/";
+const km = parseInt(prompt("Inserisci il numero dei chilometri del tuo viaggio"));
+if (isNaN(km)){
+  alert("Inserire un numero per la distanza");
+  insertOk = false;
 }
 
-// Prezzo biglietto standard
-console.log("prezzo biglietto standard",priceTicket)
-
-let priceStandard = 
-`
-Il prezzo del tuo biglietto è di: ${priceTicket} euro.
-`;
-
-document.getElementById("price-ticket").innerHTML = priceStandard;
+const age = parseInt(prompt("Inserisci la tua età"));
+if (isNaN(age)){
+  alert("Inserire un numero per l\'età");
+  insertOk = false;
+}
 
 
-// Prezzo biglietto minorenni
-console.log("prezzo biglietto minorenni",priceTicket)
-
-let priceUnderage = 
-`
-Il prezzo del tuo biglietto è di: ${priceTicket} euro.
-`;
-
-document.getElementById("price-ticket").innerHTML = priceUnderage;
+let output;
 
 
-// Prezzo biglietto anziani
-console.log("prezzo biglietto anziani",priceTicket)
+if(insertOk === true){
 
-let priceElderly = 
-`
-Il prezzo del tuo biglietto è di: ${priceTicket} euro.
-`;
+  const priceKm = 0.21;
 
-document.getElementById("price-ticket").innerHTML = priceElderly;
+  let priceTicket = (priceKm * km);
+
+  
+  if (age < 18){
+    priceTicket *= .8; // Prezzo biglietto minorenni ==  priceTicket = (priceKm * km) * 0.8;
+  }else if (age > 65){
+    priceTicket *= .6; // Prezzo biglietto anziani == priceTicket = (priceKm * km) * 0.6;
+  }
+
+
+  console.log("prezzo biglietto",priceTicket)
+
+  const output = 
+  `
+  Il prezzo del tuo biglietto è di: ${priceTicket.toFixed(2)} euro.
+  `;
+}else{
+  output = ("Inserire i dati corretti!")
+}
+
+
+document.getElementById("price-ticket").innerHTML = output;
+
